@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gracias</title>
-        <link rel="shortcut icon" href="../assets/images/favGHP.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favGHP.png" type="image/x-icon">
 
     <style>
         * {
@@ -14,86 +14,74 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #eef1f5;
+            background: #1f5fbf; /* azul tipo hero */
         }
 
         .success-wrapper {
             min-height: 100vh;
-            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 24px;
-            background: #eef1f5;
+            padding: 20px;
         }
 
         .success-card {
             position: relative;
             width: 100%;
-            max-width: 430px;
+            max-width: 420px;
             background: #ffffff;
-            border: 1px solid #d9dee7;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
-            padding: 34px 32px 30px;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            padding: 36px 32px 30px;
+            overflow: hidden;
+        }
+
+        /* línea decorativa superior */
+        .success-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: #1f5fbf;
         }
 
         .success-close {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            width: 18px;
-            height: 18px;
-            border: 1px solid #b8c0cc;
-            background: #ffffff;
-            color: #7b8794;
-            font-size: 12px;
-            line-height: 16px;
-            text-align: center;
+            top: 14px;
+            right: 14px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background: #eef2f7;
+            color: #5b6777;
+            font-size: 14px;
             text-decoration: none;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.2s ease;
         }
 
         .success-close:hover {
-            border-color: #0f2747;
-            color: #0f2747;
+            background: #1f5fbf;
+            color: #fff;
         }
 
         .success-card h2 {
-            margin: 0 0 18px;
-            font-size: 34px;
-            line-height: 1.1;
+            margin: 10px 0 16px;
+            font-size: 32px;
             font-weight: 700;
             color: #0f2747;
-            letter-spacing: -0.5px;
         }
 
         .success-card p {
-            margin: 0 0 18px;
-            font-size: 16px;
-            line-height: 1.65;
-            color: #334155;
-            max-width: 300px;
-        }
-
-        .success-card p:last-of-type {
-            margin-bottom: 28px;
-        }
-
-        .success-card strong,
-        .success-card a.inline-link {
-            color: #0f2747;
-        }
-
-        .success-card a.inline-link {
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .success-card a.inline-link:hover {
-            text-decoration: underline;
+            margin: 0 0 26px;
+            font-size: 15.5px;
+            line-height: 1.6;
+            color: #475569;
         }
 
         .success-btn {
@@ -102,8 +90,7 @@
             justify-content: center;
             width: 100%;
             min-height: 52px;
-            padding: 14px 20px;
-            border: 2px solid #0f2747;
+            border-radius: 8px;
             background: #0f2747;
             color: #ffffff;
             text-decoration: none;
@@ -111,36 +98,22 @@
             font-weight: 700;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
         }
 
         .success-btn:hover {
-            background: #ffffff;
-            color: #0f2747;
+            background: #1f5fbf;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(31, 95, 191, 0.3);
         }
 
         @media (max-width: 480px) {
-            .success-wrapper {
-                padding: 16px;
-            }
-
             .success-card {
-                padding: 28px 22px 24px;
+                padding: 28px 22px;
             }
 
             .success-card h2 {
-                font-size: 28px;
-                margin-bottom: 16px;
-            }
-
-            .success-card p {
-                font-size: 15px;
-                max-width: 100%;
-            }
-
-            .success-btn {
-                min-height: 48px;
-                font-size: 13px;
+                font-size: 26px;
             }
         }
     </style>
@@ -150,17 +123,16 @@
     <div class="success-wrapper">
         <div class="success-card">
 
-            <a href="../index.html" class="success-close" aria-label="Cerrar">×</a>
+            <a href="../index.html" class="success-close">×</a>
 
             <h2>¡Gracias!</h2>
 
             <p>
-                Hemos recibido su solicitud correctamente y nuestro equipo dará seguimiento a su mensaje a la brevedad posible.
+                Hemos recibido su solicitud correctamente. Nuestro equipo dará seguimiento a su mensaje a la brevedad posible.
             </p>
 
-           
-
             <a href="../index.html" class="success-btn">Ir al inicio</a>
+
         </div>
     </div>
 
